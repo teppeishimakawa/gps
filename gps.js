@@ -262,6 +262,7 @@ marker_p2.addListener("click",function()
 })
 infoWindow2.close();
 infoWindow2.open(map);
+infoWindow2.close();
 })
 
 //gundam
