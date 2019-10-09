@@ -126,17 +126,7 @@ if(!marker_p2)
    });
   }
 
-marker_p1.addListener("mouseover",function()
-{
-  var infoWindow1 = new google.maps.InfoWindow({
-  position: latlng1,
-  content: "This is laugh!"
-})
-if(!infoWindow1.open(map))
-{
-infoWindow1.open(map);
-}
-})
+
 /*
 if(myCircle)
 {
@@ -255,6 +245,19 @@ document.getElementById("lsClear").onclick=function(){localStorage.clear()};
 //successのカッコ
 }
 
+
+
+marker_p1.addListener("mouseover",function()
+{
+  var infoWindow1 = new google.maps.InfoWindow({
+  position: latlng1,
+  content: "This is laugh!"
+})
+if(!infoWindow1.open(map))
+{
+infoWindow1.open(map);
+}
+})
 
 
 function error(e)
