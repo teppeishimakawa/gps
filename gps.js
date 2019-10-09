@@ -243,29 +243,6 @@ document.getElementById("lsClear").onclick=function(){localStorage.clear()};
 
 
 
-
-
-
-
-//successのカッコ
-}
-
-
-
-function error(e)
-{
- alert(e.message);
-}
-
-function stop()
-{
-  clearInterval(timer);
- //navigator.geolocation.clearWatch(watchId);
-}
-
-var timer=setInterval(initMap,7000);
-
-
 //laugh
 marker_p1.addListener("click",function()
 {
@@ -298,6 +275,30 @@ marker_p3.addListener("click",function()
 })
 infoWindow3.open(map);
 })
+
+
+
+
+
+//successのカッコ
+}
+
+
+
+function error(e)
+{
+ alert(e.message);
+}
+
+function stop()
+{
+  clearInterval(timer);
+ //navigator.geolocation.clearWatch(watchId);
+}
+
+var timer=setInterval(initMap,7000);
+
+
 
 //var Spos = new google.maps.LatLng(startLatitude, startLongitude);
 //var eEpos = new google.maps.LatLng(endLatitude, endLongitude);
