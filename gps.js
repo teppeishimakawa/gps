@@ -94,7 +94,7 @@ marker_p1.addListener("click",function()
 {
   var infoWindow1 = new google.maps.InfoWindow({
   position: latlng1,
-  content: "This is laugh!<br>fujitv mascot chara<br><a href='https://www.fujitv.co.jp/present/'>フジテレビキャンペーン</a>"
+  content: "This is laugh!<br>fujitv mascot chara<br><br><a href='https://www.fujitv.co.jp/present/'>フジテレビキャンペーン</a>"
 })
 infoWindow1.open(map);
 })
@@ -123,7 +123,7 @@ marker_p2.addListener("click",function()
 {
   var infoWindow2 = new google.maps.InfoWindow({
   position: latlng2,
-  content: "This is hatitama!<br>you can go inside!!<br><a href='https://www.fujitv.co.jp/present/'>フジテレビキャンペーン</a>"
+  content: "This is hatitama!<br>you can go inside!!<br><br><a href='https://www.fujitv.co.jp/present/'>フジテレビキャンペーン</a>"
 })
 infoWindow2.close();
 infoWindow2.open(map);
@@ -153,7 +153,7 @@ marker_p3.addListener("click",function()
 {
   var infoWindow3 = new google.maps.InfoWindow({
   position: latlng3,
-  content: "This is gundam!<br>standUp!!gundam!!<br><a href='https://www.fujitv.co.jp/present/'>フジテレビキャンペーン</a>",
+  content: "This is gundam!<br>standUp!!gundam!!<br><br><a href='https://www.fujitv.co.jp/present/'>フジテレビキャンペーン</a>",
   maxWidth: 200,
 })
 infoWindow3.open(map);
