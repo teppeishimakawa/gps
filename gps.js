@@ -143,7 +143,7 @@ marker_p2.addListener("click",function()
   position: latlng2,
   content: "This is hatitama!" + "<br>" + "you can go inside!!"
 })
-if(!infoWindow2){
+if(!infoWindow2.open(map)){
 infoWindow2.open(map);}
 })
 
