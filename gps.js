@@ -153,7 +153,7 @@ marker_p3.addListener("click",function()
 {
   var infoWindow3 = new google.maps.InfoWindow({
   position: latlng3,
-  content: "This is gundam!" + "<br>" + "standUp!!gundam!!" + "<br>" + "aaaaaaa"
+  content: "This is gundam!" + "<br>" + "standUp!!gundam!!aa" + "<br>" + "aaaaaaa"
 })
 infoWindow3.open(map);
 })
