@@ -21,41 +21,6 @@ function initMap()
 {
    navigator.geolocation.getCurrentPosition(success, error, {enableHighAccuracy:true, timeout:10000, maximumAge:0});
  //watchId=navigator.geolocation.watchPosition(success, error, {enableHighAccuracy:true, timeout:10000, maximumAge:0});
-
-//laugh
-marker_p1.addListener("click",function()
-{
-  var infoWindow1 = new google.maps.InfoWindow({
-  position: latlng1,
-  content: "This is laugh!" + "<br>" + "fujitv mascot chara"
-})
-infoWindow1.open(map);
-})
-
-
-//hatitama
-marker_p2.addListener("click",function()
-{
-  var infoWindow2 = new google.maps.InfoWindow({
-  position: latlng2,
-  content: "This is hatitama!" + "<br>" + "you can go inside!!"
-})
-infoWindow2.close();
-infoWindow2.open(map);
-})
-
-
-//gundam
-marker_p3.addListener("click",function()
-{
-  var infoWindow3 = new google.maps.InfoWindow({
-  position: latlng3,
-  content: "This is gundam!" + "<br>" + "standUp!!gundam!!"
-})
-infoWindow3.open(map);
-})
-
- 
 }
 
 
@@ -123,6 +88,17 @@ if(!marker_p1)
        scaledSize: new google.maps.Size(30, 30)  // サイズを指定
        }
    });
+
+  //laugh
+marker_p1.addListener("click",function()
+{
+  var infoWindow1 = new google.maps.InfoWindow({
+  position: latlng1,
+  content: "This is laugh!" + "<br>" + "fujitv mascot chara"
+})
+infoWindow1.open(map);
+})
+   
   }
 
 
@@ -160,6 +136,9 @@ if(!marker_p2)
        }
    });
   }
+
+
+
 
 
 /*
