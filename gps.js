@@ -132,7 +132,7 @@ marker_p1.addListener("mouseover",function()
   position: latlng1,
   content: "This is laugh!"
 })
-if(!infoWindow1)
+if(!infoWindow1.open(map))
 {
 infoWindow1.open(map);
 }
