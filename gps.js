@@ -98,7 +98,7 @@ marker_p1.addListener("click",function()
 })
 infoWindow1.open(map);
 })
-   
+
   }
 
 
@@ -117,6 +117,18 @@ if(!marker_p2)
        optimized:false
        }
    });
+
+//hatitama
+marker_p2.addListener("click",function()
+{
+  var infoWindow2 = new google.maps.InfoWindow({
+  position: latlng2,
+  content: "This is hatitama!" + "<br>" + "you can go inside!!"
+})
+infoWindow2.close();
+infoWindow2.open(map);
+})
+
   }
 
 
@@ -135,7 +147,20 @@ if(!marker_p2)
        scaledSize: new google.maps.Size(30, 30)  // サイズを指定
        }
    });
+
+//gundam
+marker_p3.addListener("click",function()
+{
+  var infoWindow3 = new google.maps.InfoWindow({
+  position: latlng3,
+  content: "This is gundam!" + "<br>" + "standUp!!gundam!!"
+})
+infoWindow3.open(map);
+})
+
   }
+
+
 
 
 
