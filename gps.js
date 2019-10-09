@@ -87,6 +87,13 @@ if(!marker_p1)
        url: "./icon/laugh.jpg", // 画像URL
        scaledSize: new google.maps.Size(30, 30)  // サイズを指定
        }
+  　    label: {
+       text: 'laugh',         //ラベル文字
+       color: '#ff0000',          //ラベル文字の色
+       fontFamily: 'sans-serif',  //フォント 
+       fontWeight: 'bold',        //フォントの太さ 
+       fontSize: '14px'           //フォントのサイズ 
+    } 
    });
   }
 
