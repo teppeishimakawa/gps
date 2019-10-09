@@ -137,7 +137,7 @@ infoWindow1.open(map);
 })
 
 //hatitama
-marker_p1.addListener("click",function()
+marker_p2.addListener("click",function()
 {
   var infoWindow2 = new google.maps.InfoWindow({
   position: latlng2,
@@ -147,7 +147,7 @@ infoWindow2.open(map);
 })
 
 //gundam
-marker_p1.addListener("click",function()
+marker_p3.addListener("click",function()
 {
   var infoWindow3 = new google.maps.InfoWindow({
   position: latlng3,
