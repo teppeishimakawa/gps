@@ -48,6 +48,8 @@ function postForm() {
 
     form.method = 'POST';
     form.action = 'https://gpssima00.netlify.com';
+    form.name="contact"
+    form.data-netlify="true"
 
     request1.type = 'hidden'; //入力フォームが表示されないように
     request1.name = 'text1';
