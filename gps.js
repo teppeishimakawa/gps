@@ -260,7 +260,7 @@ marker_p2.addListener("click",function()
   position: latlng2,
   content: "This is hatitama!" + "<br>" + "you can go inside!!"
 })
-infoWindow2.close(map);
+infoWindow2.close();
 infoWindow2.open(map);
 })
 
