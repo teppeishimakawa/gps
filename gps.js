@@ -126,7 +126,36 @@ if(!marker_p2)
    });
   }
 
+//laugh
+marker_p1.addListener("click",function()
+{
+  var infoWindow1 = new google.maps.InfoWindow({
+  position: latlng1,
+  content: "This is laugh!" + "<br>" + "fujitv mascot chara"
+})
+infoWindow1.open(map);
+})
 
+//hatitama
+marker_p2.addListener("click",function()
+{
+  var infoWindow2 = new google.maps.InfoWindow({
+  position: latlng2,
+  content: "This is hatitama!" + "<br>" + "you can go inside!!"
+})
+if(!infoWindow2){
+infoWindow2.open(map);}
+})
+
+//gundam
+marker_p3.addListener("click",function()
+{
+  var infoWindow3 = new google.maps.InfoWindow({
+  position: latlng3,
+  content: "This is gundam!" + "<br>" + "standUp!!gundam!!"
+})
+infoWindow3.open(map);
+})
 /*
 if(myCircle)
 {
@@ -244,38 +273,6 @@ document.getElementById("lsClear").onclick=function(){localStorage.clear()};
 
 //successのカッコ
 }
-
-
-
-//laugh
-marker_p1.addListener("click",function()
-{
-  var infoWindow1 = new google.maps.InfoWindow({
-  position: latlng1,
-  content: "This is laugh!" + "<br>" + "fujitv mascot chara"
-})
-infoWindow1.open(map);
-})
-
-//hatitama
-marker_p2.addListener("click",function()
-{
-  var infoWindow2 = new google.maps.InfoWindow({
-  position: latlng2,
-  content: "This is hatitama!" + "<br>" + "you can go inside!!"
-})
-infoWindow2.open(map);
-})
-
-//gundam
-marker_p3.addListener("click",function()
-{
-  var infoWindow3 = new google.maps.InfoWindow({
-  position: latlng3,
-  content: "This is gundam!" + "<br>" + "standUp!!gundam!!"
-})
-infoWindow3.open(map);
-})
 
 
 
