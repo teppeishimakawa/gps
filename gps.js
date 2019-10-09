@@ -127,7 +127,7 @@ if(!marker_p2)
   }
 
 
-marker_p1.addEventListener("mouseover",function()
+marker_p1.addListener("mouseover",function()
 {
   var infoWindow1 = new google.maps.InfoWindow({
   position: latlng1,
