@@ -130,7 +130,7 @@ marker_p1.addListener("click",function()
 {
   var infoWindow1 = new google.maps.InfoWindow({
   position: latlng1,
-  content: "This is laugh!" + "\n" + "fujitv mascot chara"
+  content: "This is laugh!" + "<br>" + "fujitv mascot chara"
 })
 infoWindow1.open(map);
 
