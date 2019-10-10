@@ -15,7 +15,7 @@
  margin:5px;
  font-size:15px;
 }
-#result{
+#result,#sumimark{
  font-size:30px;
 }
 </style>
@@ -86,12 +86,11 @@ sumi.addEventListener('click', function(e)
 {
   clearTimeout(timer);
   clicks++;
-  var evt = e;
   timer = setTimeout(function() {
     if(clicks==3)
     	{
     	document.getElementById("sumimark").innerHTML="「割引券利用済み」";
-        localStorage.setItem('lott2', 1);
+      localStorage.setItem('lott2', 1);
     	};
     clicks = 0;
   }, timeout);
