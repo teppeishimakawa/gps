@@ -15,17 +15,34 @@
  margin:5px;
  font-size:15px;
 }
+#result{
+ font-size:30px;
+}
 </style>
 </head>
 <body>
 <div>抽選ページ</div>
+<br>
 <input type="button" value="抽選開始！" id="cyusen" class="btn">
 <br>
 <br>
 <div id="result"></div>
+<br>
+<br>
+<input type="button" value="lsClear" id="lsClear" >
 <script>
 
 document.getElementById("result").innerHTML="";
+
+if(localStorage.getItem("lott") == 1)
+ {
+ document.getElementById("cyusen").disabled="true";
+ }
+
+document.getElementById("lsClear").onclick=function(){localStorage.clear()};
+
+
+
 document.getElementById("cyusen").onclick=function cyusen()
 {
 var arr=[2,1,1,1,1,0,0,0,0,0];
@@ -42,6 +59,8 @@ if(lot == 2)
  {
  document.getElementById("result").innerHTML="はちたま見学料1割引チケットが当たりました！";
  }
+
+localStorage.setItem('lott', 1);
 };
 
 
