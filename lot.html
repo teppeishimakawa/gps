@@ -4,11 +4,45 @@
 <meta name="viewport" content="initial-scale=1.0" charset=utf-8">
 
 <style>
-
+.btn{
+ width:150px;
+ height:50px;
+ line-height:80px;
+ text-align:center;
+ display:inline-block;
+ border-radius:5px;
+ text-decoration:none;
+ margin:5px;
+}
 </style>
 </head>
 <body>
-
 <div>抽選ページ</div>
+<div id="result"></div>
+<input type="button" value="抽選開始！" id="cyusen" class="btn">
+<script>
+
+
+document.getElementById("cyusen").onclick= cyusen();
+
+function cyusen()
+{
+var arr=[2,1,1,1,1,0,0,0,0,0];
+var lot=Math.floor(Math.random()*arr.length);
+
+if(lot == 2)
+ {
+ document.getElementById("result").innerHTML="はちたま見学料半額チケットが当たりました！";
+ }
+ else if(lot == 1)
+ {
+ document.getElementById("result").innerHTML="はちたま見学料3割引チケットが当たりました！";
+ }else
+ {
+ document.getElementById("result").innerHTML="はちたま見学料1割引チケットが当たりました！";
+ }
+}
+
+</script>
 </body>
 </html>
