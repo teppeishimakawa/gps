@@ -7,23 +7,26 @@
 .btn{
  width:150px;
  height:50px;
- line-height:80px;
+ line-height:50px;
  text-align:center;
  display:inline-block;
  border-radius:5px;
  text-decoration:none;
  margin:5px;
+ font-size:15px;
 }
 </style>
 </head>
 <body>
 <div>抽選ページ</div>
-<div id="result"></div>
 <input type="button" value="抽選開始！" id="cyusen" class="btn">
+<br>
+<br>
+<div id="result"></div>
 <script>
 
 
-document.getElementById("cyusen").onclick= cyusen();
+
 
 function cyusen()
 {
@@ -42,6 +45,8 @@ if(lot == 2)
  document.getElementById("result").innerHTML="はちたま見学料1割引チケットが当たりました！";
  }
 }
+
+document.getElementById("cyusen").onclick= cyusen();
 
 </script>
 </body>
