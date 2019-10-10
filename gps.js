@@ -308,7 +308,7 @@ var timer=setInterval(initMap,7000);
 
 document.getElementById("eng").onclick=function()
 {
-document.getElementById("scpt").src="https://maps.googleapis.com/maps/api/js?language=en&key=AIzaSyCEC5bISNkbc_eVrLGMH8fp01Yx30aT9g0&callback=initMap"
+//document.getElementById("scpt").src="https://maps.googleapis.com/maps/api/js?language=en&key=AIzaSyCEC5bISNkbc_eVrLGMH8fp01Yx30aT9g0&callback=initMap"
 }
 
 document.getElementById("jpn").onclick=function()
