@@ -27,23 +27,35 @@
 <br>
 <br>
 <div id="result"></div>
+<div id="sumimark"></div>
 <br>
 <br>
+<div>下記ボタンは、スタッフ以外は操作しないで下さい</div>
+<input type="button" value="済みマーク" id="sumi" class="btn">
 <input type="button" value="lsClear" id="lsClear" >
 <script>
 
 document.getElementById("result").innerHTML="";
+document.getElementById("sumimark").innerHTML="";
+
 
 if(localStorage.getItem("lott") == 1)
  {
  document.getElementById("cyusen").disabled="true";
  }
 
+
+if(localStorage.getItem("lott2") == 1)
+ {
+ document.getElementById("sumimark").innerHTML="「割引券利用済み」";
+ }
+
+
 document.getElementById("lsClear").onclick=function(){localStorage.clear()};
 
 
 
-document.getElementById("cyusen").onclick=function cyusen()
+document.getElementById("cyusen").onclick=function ()
 {
 var arr=[2,1,1,1,1,0,0,0,0,0];
 var lot=Math.floor(Math.random()*arr.length);
@@ -64,6 +76,31 @@ localStorage.setItem('lott', 1);
 document.getElementById("cyusen").disabled="true";
 };
 
+
+
+var clicks = 0;
+var timer;
+var timeout = 350; // time between each click
+
+var tripleClick;
+
+// click timer
+sumi.addEventListener('click', function(e)
+{
+  clearTimeout(timer);
+  clicks++;
+  var evt = e;
+  timer = setTimeout(function() {
+    if(clicks==3) tripleClick(evt);
+    clicks = 0;
+  }, timeout);
+});
+
+if(tripleClick)
+{
+document.getElementById("sumimark").innerHTML="「割引券利用済み」";
+localStorage.setItem('lott2', 1);
+}
 
 </script>
 </body>
