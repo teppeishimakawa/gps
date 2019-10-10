@@ -282,6 +282,15 @@ window.location.href="./lot.html";
 document.getElementById("lsClear").onclick=function(){localStorage.clear()};
 
 
+document.getElementById("eng").onclick=function()
+{
+document.getElementById("scpt").src="https://maps.googleapis.com/maps/api/js?language=en&key=AIzaSyCEC5bISNkbc_eVrLGMH8fp01Yx30aT9g0&callback=initMap"
+}
+
+document.getElementById("jpn").onclick=function()
+{
+document.getElementById("scpt").src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEC5bISNkbc_eVrLGMH8fp01Yx30aT9g0&callback=initMap"
+}
 
 
 
@@ -306,15 +315,7 @@ function stop()
 
 var timer=setInterval(initMap,7000);
 
-document.getElementById("engg").onclick=function()
-{
-//document.getElementById("scpt").src="https://maps.googleapis.com/maps/api/js?language=en&key=AIzaSyCEC5bISNkbc_eVrLGMH8fp01Yx30aT9g0&callback=initMap"
-}
 
-document.getElementById("jpnn").onclick=function()
-{
-document.getElementById("scpt").src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEC5bISNkbc_eVrLGMH8fp01Yx30aT9g0&callback=initMap"
-}
 
 //var Spos = new google.maps.LatLng(startLatitude, startLongitude);
 //var eEpos = new google.maps.LatLng(endLatitude, endLongitude);
