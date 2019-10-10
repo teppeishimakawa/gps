@@ -25,11 +25,8 @@
 <div id="result"></div>
 <script>
 
-
 document.getElementById("result").innerHTML="";
-document.getElementById("cyusen").onclick= cyusen();
-
-function cyusen()
+document.getElementById("cyusen").onclick=function cyusen()
 {
 var arr=[2,1,1,1,1,0,0,0,0,0];
 var lot=Math.floor(Math.random()*arr.length);
@@ -45,7 +42,7 @@ if(lot == 2)
  {
  document.getElementById("result").innerHTML="はちたま見学料1割引チケットが当たりました！";
  }
-}
+};
 
 
 </script>
