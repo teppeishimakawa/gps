@@ -11,11 +11,19 @@ var myCircle;
 
 var latlng0,latlng1,latlng2,latlng3;
 
+var hizuke=new Date().getDate() ;
+
 
 
 //geolocation
 
 navigator.geolocation.getCurrentPosition(success, error, {enableHighAccuracy:true, timeout:10000, maximumAge:0});
+
+
+if(localStorage.getItem("lot1_1") < (hizuke - 1)){localStorage.clear()};
+if(localStorage.getItem("lot2_1") < (hizuke - 1)){localStorage.clear()};
+if(localStorage.getItem("lot3_1") < (hizuke - 1)){localStorage.clear()};
+
 
 function initMap()
 {
@@ -163,10 +171,6 @@ infoWindow3.open(map);
 
 
 
-
-
-
-
 /*
 if(myCircle)
 {
@@ -264,18 +268,21 @@ if((dis3 < 20) && (localStorage.getItem("lot3") != 1))
 document.getElementById("lot1").onclick=function()
  {
 localStorage.setItem('lot1', 1);
+localStorage.setItem('lot1_1', hizuke);
 window.location.href="./lot.html";
  }
 
 document.getElementById("lot2").onclick=function()
  {
 localStorage.setItem('lot2', 1);
+localStorage.setItem('lot2_1', hizuke);
 window.location.href="./lot.html";
  }
 
 document.getElementById("lot3").onclick=function()
  {
 localStorage.setItem('lot3', 1);
+localStorage.setItem('lot3_1', hizuke);
 window.location.href="./lot.html";
  }
 
