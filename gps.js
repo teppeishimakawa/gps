@@ -11,7 +11,7 @@ var myCircle;
 
 var latlng0,latlng1,latlng2,latlng3;
 
-var hizuke=new Date().getMinutes() ;
+var hizuke=new Date().getDate();
 
 
 

@@ -36,6 +36,11 @@
 <input type="button" value="lsClear" id="lsClear" >
 <script>
 
+var hizuke=new Date().getDate();
+
+if((localStorage.getItem("sanka") < (hizuke - 1)) || !(localStorage.getItem("sanka"))){localStorage.clear()};
+localStorage.setItem("sanka",hizuke);
+
 document.getElementById("result").innerHTML="";
 document.getElementById("sumimark").innerHTML="";
 
