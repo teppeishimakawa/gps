@@ -267,19 +267,19 @@ if((dis3 < 20) && (localStorage.getItem("lot3") != 1))
 document.getElementById("lot1").onclick=function()
  {
 localStorage.setItem('lot1', 1);
-window.location.href="./lot.html";
+window.location.href="./lot1.html";
  }
 
 document.getElementById("lot2").onclick=function()
  {
 localStorage.setItem('lot2', 1);
-window.location.href="./lot.html";
+window.location.href="./lot2.html";
  }
 
 document.getElementById("lot3").onclick=function()
  {
 localStorage.setItem('lot3', 1);
-window.location.href="./lot.html";
+window.location.href="./lot3.html";
  }
 
 document.getElementById("lsClear").onclick=function(){localStorage.clear()};

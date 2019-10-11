@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+<style>
+.btn{
+ width:150px;
+ height:50px;
+ line-height:50px;
+ text-align:center;
+ display:inline-block;
+ border-radius:5px;
+ text-decoration:none;
+ margin:5px;
+ font-size:15px;
+}
+#result,#sumimark{
+ font-size:30px;
+}
+</style>
+</head>
+<body>
+<div>抽選ページ</div>
+<br>
+<input type="button" value="抽選開始！" id="cyusen" class="btn">
+<br>
+<br>
+<div id="result"></div>
+<br>
+<div id="sumimark"></div>
+<br>
+<br>
+<div>下記ボタンは、スタッフ以外は操作しないで下さい</div>
+<input type="button" value="済みマーク" id="sumi" class="btn">
+<input type="button" value="lsClear" id="lsClear" >
+<script>
+
+var hizuke=new Date().getDate();
+
+if((localStorage.getItem("sanka") < (hizuke - 1)) || !(localStorage.getItem("sanka"))){localStorage.clear()};
+localStorage.setItem("sanka",hizuke);
+
+document.getElementById("result").innerHTML="";
+document.getElementById("sumimark").innerHTML="";
+
+
+if(localStorage.getItem("lott") == 1)
+ {
+ document.getElementById("cyusen").disabled="true";
+ }
+
+
+if(localStorage.getItem("lott2") == 1)
+ {
+ document.getElementById("sumimark").innerHTML="「割引券利用済み」";
+ }
+
+
+document.getElementById("lsClear").onclick=function(){localStorage.clear()};
+
+
+
+document.getElementById("cyusen").onclick=function ()
+{
+var arr=[2,1,1,1,1,0,0,0,0,0];
+var lot=Math.floor(Math.random()*arr.length);
+
+if(lot == 2)
+ {
+ document.getElementById("result").innerHTML="はちたま見学料<br>[半額チケット]が当たりました！";
+ }
+ else if(lot == 1)
+ {
+ document.getElementById("result").innerHTML="はちたま見学料<br>[3割引チケット]が当たりました！";
+ }else
+ {
+ document.getElementById("result").innerHTML="はちたま見学料<br>[1割引チケット]が当たりました！";
+ }
+
+localStorage.setItem('lott', 1);
+document.getElementById("cyusen").disabled="true";
+};
+
+
+
+var clicks = 0;
+var timer,timeout = 1000; // time between each click
+
+// click timer
+sumi.addEventListener('click', function(e)
+{
+  clearTimeout(timer);
+  clicks++;
+  timer = setTimeout(function() {
+    if(clicks==3)
+    	{
+    	document.getElementById("sumimark").innerHTML="「割引券利用済み」";
+      localStorage.setItem('lott2', 1);
+    	};
+    clicks = 0;
+  }, timeout);
+});
+
+
+</script>
+</body>
+</html>
