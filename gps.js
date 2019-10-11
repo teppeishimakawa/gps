@@ -11,7 +11,7 @@ var myCircle;
 
 var latlng0,latlng1,latlng2,latlng3;
 
-var hizuke=new Date().getDate() ;
+var hizuke=new Date().getMinutes() ;
 
 
 
@@ -22,7 +22,7 @@ navigator.geolocation.getCurrentPosition(success, error, {enableHighAccuracy:tru
 
 if((localStorage.getItem("sanka") < (hizuke - 1)) || !(localStorage.getItem("sanka"))){localStorage.clear()};
 
-localStorage.setItem("sanka",new Date().getDate() );
+localStorage.setItem("sanka",hizuke);
 
 function initMap()
 {
