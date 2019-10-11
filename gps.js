@@ -1,5 +1,5 @@
 var num = 0;
-var watchId;
+//var watchId;
 
 var map;
 var ido,keido;
@@ -14,15 +14,12 @@ var latlng0,latlng1,latlng2,latlng3;
 var hizuke=new Date().getDate();
 
 
+if((localStorage.getItem("sanka") < (hizuke - 1)) || !(localStorage.getItem("sanka"))){localStorage.clear()};
+localStorage.setItem("sanka",hizuke);
 
 //geolocation
-
 navigator.geolocation.getCurrentPosition(success, error, {enableHighAccuracy:true, timeout:10000, maximumAge:0});
 
-
-if((localStorage.getItem("sanka") < (hizuke - 1)) || !(localStorage.getItem("sanka"))){localStorage.clear()};
-
-localStorage.setItem("sanka",hizuke);
 
 function initMap()
 {
