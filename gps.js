@@ -208,7 +208,7 @@ function distance(lat1, lng1, lat2, lng2) {
 
 
 //ラフ
-if((dis1 < 20000) && (localStorage.getItem("lot1") !== 1))
+if((dis1 < 20000) && (localStorage.getItem("lot1") != 1))
   {
   marker_p1.setAnimation(google.maps.Animation.BOUNCE);
   marker_p1.setIcon(
