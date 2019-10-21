@@ -300,7 +300,7 @@ if(localStorage.getItem("lott1a") == 1)
   document.getElementById("kekka2").onclick=function(){window.location.href="./lot2.html";};
  }else
  {
-  document.getElementById("kekka1").disabled="true";
+  document.getElementById("kekka2").disabled="true";
  }
 
 
@@ -310,7 +310,7 @@ if(localStorage.getItem("lott1a") == 1)
   document.getElementById("kekka3").onclick=function(){window.location.href="./lot3.html";};
  }else
  {
-  document.getElementById("kekka1").disabled="true";
+  document.getElementById("kekka3").disabled="true";
  }
 
 
