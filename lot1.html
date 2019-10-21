@@ -169,12 +169,21 @@ sumi.addEventListener('click', function(e)
   }, timeout);
 });
 
-document.addEventListener('touchstart', function(e) {
-  if (event.touches.length > 1) {
+
+//拡大縮小ガード
+try
+{
+document.addEventListener('touchstart', function(e)
+ {
+  if (event.touches.length > 1)
+  {
     event.preventDefault();
   }
-}, {passive: false});
-
+ }, {passive: false});
+}catch(e)
+{
+ return false
+}
 
 </script>
 </body>
