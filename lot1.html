@@ -85,19 +85,29 @@ var lot=Math.floor(Math.random()*arr.length);
 
 if(lot == 2)
  {
- document.getElementById("result").innerHTML="はちたま見学料<br>[半額チケット]が当たりました！";
+ document.getElementById("result").innerHTML="<img src='./icon/laughlot.gif'>";
+ setTimeout(function()
+  {
+  document.getElementById("result").innerHTML="はちたま見学料<br>[半額チケット]が当たりました！"},3000);
  }
  else if(lot == 1)
  {
- document.getElementById("result").innerHTML="はちたま見学料<br>[3割引チケット]が当たりました！";
+ document.getElementById("result").innerHTML="<img src='./icon/laughlot.gif'>";
+  setTimeout(function()
+  {
+  document.getElementById("result").innerHTML="はちたま見学料<br>[3割引チケット]が当たりました！"},3000);
  }else
  {
- document.getElementById("result").innerHTML="はちたま見学料<br>[1割引チケット]が当たりました！";
+ document.getElementById("result").innerHTML="<img src='./icon/laughlot.gif'>";
+  setTimeout(function()
+  {
+  document.getElementById("result").innerHTML="はちたま見学料<br>[1割引チケット]が当たりました！"},3000);
  }
 
 localStorage.setItem('lott', 1);
 document.getElementById("cyusen").disabled="true";
 };
+
 
 
 
