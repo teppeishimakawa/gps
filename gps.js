@@ -208,7 +208,7 @@ function distance(lat1, lng1, lat2, lng2) {
 
 
 //ラフ
-if((dis1 < 20000) && (localStorage.getItem("lot1") != 1))
+if((dis1 < 20000) && (localStorage.getItem("lott1a") != 1))
   {
   marker_p1.setAnimation(google.maps.Animation.BOUNCE);
   marker_p1.setIcon(
@@ -219,13 +219,13 @@ if((dis1 < 20000) && (localStorage.getItem("lot1") != 1))
   document.getElementById("lot1").disabled="";
   }else
   {
-    //document.getElementById("lot1").disabled="true";
+    document.getElementById("lot1").disabled="true";
     marker_p1.setAnimation(null);
   }
 
 
 //はちたま
-if((dis2 < 50000) && (localStorage.getItem("lot2") != 1))
+if((dis2 < 50000) && (localStorage.getItem("lott1b") != 1))
   {
   marker_p2.setAnimation(google.maps.Animation.BOUNCE);
   marker_p2.setIcon(
@@ -236,12 +236,12 @@ if((dis2 < 50000) && (localStorage.getItem("lot2") != 1))
   document.getElementById("lot2").disabled="";
   }else
   {
-    //document.getElementById("lot2").disabled="true";
+    document.getElementById("lot2").disabled="true";
     marker_p2.setAnimation(null);
   }
 
 
-if((dis3 < 50000) && (localStorage.getItem("lot3") != 1))
+if((dis3 < 50000) && (localStorage.getItem("lott1c") != 1))
   {
   marker_p3.setAnimation(google.maps.Animation.BOUNCE);
   marker_p3.setIcon(
@@ -252,7 +252,7 @@ if((dis3 < 50000) && (localStorage.getItem("lot3") != 1))
   document.getElementById("lot3").disabled="";
   }else
   {
-    //document.getElementById("lot3").disabled="true";
+    document.getElementById("lot3").disabled="true";
     marker_p3.setAnimation(null);
   }
 
