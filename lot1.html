@@ -35,7 +35,7 @@
 <div class="cyusen3">
 <div class="cyusen3">抽選ページ</div>
 <br>
-
+<!--buttonはtext align:centerで揃う-->
 <input class="cyusen2" type="button" value="抽選開始！" id="cyusen">
 
 <br>
@@ -70,7 +70,7 @@ if(localStorage.getItem("lott") == 1)
 
 if(localStorage.getItem("lott2") == 1)
  {
- document.getElementById("sumimark").innerHTML="「割引券利用済み」";
+ document.getElementById("sumimark").innerHTML="<img src='./icon/sumi.png'>";
  }
 
 
