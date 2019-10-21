@@ -219,7 +219,7 @@ if((dis1 < 20000) && (localStorage.getItem("lot1") != 1))
   document.getElementById("lot1").disabled="";
   }else
   {
-    //document.getElementById("lot1").disabled="true";
+    document.getElementById("lot1").disabled="true";
     marker_p1.setAnimation(null);
   }
 
@@ -236,7 +236,7 @@ if((dis2 < 50000) && (localStorage.getItem("lot2") != 1))
   document.getElementById("lot2").disabled="";
   }else
   {
-    //document.getElementById("lot2").disabled="true";
+    document.getElementById("lot2").disabled="true";
     marker_p2.setAnimation(null);
   }
 
@@ -252,7 +252,7 @@ if((dis3 < 50000) && (localStorage.getItem("lot3") != 1))
   document.getElementById("lot3").disabled="";
   }else
   {
-    //document.getElementById("lot3").disabled="true";
+    document.getElementById("lot3").disabled="true";
     marker_p3.setAnimation(null);
   }
 
