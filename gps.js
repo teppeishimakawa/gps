@@ -225,7 +225,7 @@ if((dis1 < 20000) && (localStorage.getItem("lott1a") != 1))
 
 
 //はちたま
-if((dis2 < 50000) && (localStorage.getItem("lott1b") != 1))
+if((dis2 < 50) && (localStorage.getItem("lott1b") != 1))
   {
   marker_p2.setAnimation(google.maps.Animation.BOUNCE);
   marker_p2.setIcon(
@@ -241,7 +241,7 @@ if((dis2 < 50000) && (localStorage.getItem("lott1b") != 1))
   }
 
 
-if((dis3 < 50000) && (localStorage.getItem("lott1c") != 1))
+if((dis3 < 50) && (localStorage.getItem("lott1c") != 1))
   {
   marker_p3.setAnimation(google.maps.Animation.BOUNCE);
   marker_p3.setIcon(
