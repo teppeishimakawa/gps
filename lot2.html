@@ -62,13 +62,13 @@ document.getElementById("result").innerHTML="";
 document.getElementById("sumimark").innerHTML="";
 
 
-if(localStorage.getItem("lott") == 1)
+if(localStorage.getItem("lott3") == 1)
  {
  document.getElementById("cyusen").disabled="true";
  }
 
 
-if(localStorage.getItem("lott2") == 1)
+if(localStorage.getItem("lott4") == 1)
  {
  document.getElementById("sumimark").innerHTML="<img src='./icon/sumi.png'>";
  }
@@ -104,7 +104,7 @@ if(lot == 2)
   document.getElementById("result").innerHTML="はちたま入場料<br>[10%OFFチケット]が当たりました！"},5000);
  }
 
-localStorage.setItem('lott', 1);
+localStorage.setItem('lott3', 1);
 document.getElementById("cyusen").disabled="true";
 };
 
@@ -123,7 +123,7 @@ sumi.addEventListener('click', function(e)
     if(clicks==3)
     	{
     	document.getElementById("sumimark").innerHTML="<img src='./icon/sumi.png'>";
-      localStorage.setItem('lott2', 1);
+      localStorage.setItem('lott4', 1);
     	};
     clicks = 0;
   }, timeout);

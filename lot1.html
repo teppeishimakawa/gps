@@ -62,7 +62,7 @@ document.getElementById("result").innerHTML="";
 document.getElementById("sumimark").innerHTML="";
 
 
-if(localStorage.getItem("lott") == 1)
+if(localStorage.getItem("lott1") == 1)
  {
  document.getElementById("cyusen").disabled="true";
  }
@@ -104,7 +104,7 @@ if(lot == 2)
   document.getElementById("result").innerHTML="はちたま入場料<br>[10%OFFチケット]が当たりました！"},5000);
  }
 
-localStorage.setItem('lott', 1);
+localStorage.setItem('lott1', 1);
 document.getElementById("cyusen").disabled="true";
 };
 
