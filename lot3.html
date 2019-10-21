@@ -165,6 +165,23 @@ sumi.addEventListener('click', function(e)
 });
 
 
+
+//拡大縮小ガード
+try
+{
+document.addEventListener('touchstart', function(e)
+ {
+  if (event.touches.length > 1)
+  {
+    event.preventDefault();
+  }
+ }, {passive: false});
+}catch(e)
+{
+ false
+}
+
+
 </script>
 </body>
 </html>
