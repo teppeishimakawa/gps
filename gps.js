@@ -15,6 +15,7 @@ var hizuke=new Date().getDate();
 
 
 
+
 //geolocation
 navigator.geolocation.getCurrentPosition(success, error, {enableHighAccuracy:true, timeout:10000, maximumAge:0});
 
@@ -219,7 +220,7 @@ if((dis1 < 20000) && (localStorage.getItem("lott1a") != 1))
   document.getElementById("lot1").disabled="";
   }else
   {
-    //document.getElementById("lot1").disabled="true";
+    document.getElementById("lot1").disabled="true";
     marker_p1.setAnimation(null);
   }
 
@@ -236,7 +237,7 @@ if((dis2 < 50) && (localStorage.getItem("lott1b") != 1))
   document.getElementById("lot2").disabled="";
   }else
   {
-    //document.getElementById("lot2").disabled="true";
+    document.getElementById("lot2").disabled="true";
     marker_p2.setAnimation(null);
   }
 
@@ -252,7 +253,7 @@ if((dis3 < 50) && (localStorage.getItem("lott1c") != 1))
   document.getElementById("lot3").disabled="";
   }else
   {
-    //document.getElementById("lot3").disabled="true";
+    document.getElementById("lot3").disabled="true";
     marker_p3.setAnimation(null);
   }
 
@@ -279,6 +280,37 @@ window.location.href="./lot3.html";
  }
 
 document.getElementById("lsClear").onclick=function(){localStorage.clear()};
+
+
+
+if(localStorage.getItem("lott1a") == 1)
+ {
+  document.getElementById("kekka1").disabled="";
+  document.getElementById("kekka1").onclick=function(){window.location.href="./lot1.html";};
+ }else
+ {
+  document.getElementById("kekka1").disabled="true";
+ }
+
+
+ if(localStorage.getItem("lott1b") == 1)
+ {
+  document.getElementById("kekka2").disabled="";
+  document.getElementById("kekka2").onclick=function(){window.location.href="./lot2.html";};
+ }else
+ {
+  document.getElementById("kekka1").disabled="true";
+ }
+
+
+ if(localStorage.getItem("lott1c") == 1)
+ {
+  document.getElementById("kekka3").disabled="";
+  document.getElementById("kekka3").onclick=function(){window.location.href="./lot3.html";};
+ }else
+ {
+  document.getElementById("kekka1").disabled="true";
+ }
 
 
 //successのカッコ
