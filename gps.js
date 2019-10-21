@@ -112,7 +112,7 @@ if(!marker_p2)
   {
 
    //latlng2 = new google.maps.LatLng(randRange(35626500,35627690) ,randRange(139772903,139775709));
-   latlng2 = new google.maps.LatLng(35.627012,139.774750);
+   latlng2 = new google.maps.LatLng(35.627006,139.774624);
    marker_p2 = new google.maps.Marker
    ({
    position:latlng2,
@@ -225,7 +225,7 @@ if((dis1 < 20000) && (localStorage.getItem("lot1") != 1))
 
 
 //はちたま
-if((dis2 < 30) && (localStorage.getItem("lot2") != 1))
+if((dis2 < 50000) && (localStorage.getItem("lot2") != 1))
   {
   marker_p2.setAnimation(google.maps.Animation.BOUNCE);
   marker_p2.setIcon(
@@ -241,7 +241,7 @@ if((dis2 < 30) && (localStorage.getItem("lot2") != 1))
   }
 
 
-if((dis3 < 30) && (localStorage.getItem("lot3") != 1))
+if((dis3 < 50000) && (localStorage.getItem("lot3") != 1))
   {
   marker_p3.setAnimation(google.maps.Animation.BOUNCE);
   marker_p3.setIcon(

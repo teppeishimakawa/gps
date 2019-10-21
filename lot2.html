@@ -4,7 +4,17 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
 <style>
-.btn{
+#result,#sumimark
+{
+ font-size:30px;
+}
+.cyusen1
+{
+ width: 80%;
+ margin: 10px auto;
+}
+.cyusen2
+{
  width:150px;
  height:50px;
  line-height:50px;
@@ -12,30 +22,41 @@
  display:inline-block;
  border-radius:5px;
  text-decoration:none;
- margin:5px;
- font-size:15px;
+ margin: 10px auto;
 }
-#result,#sumimark{
- font-size:30px;
+.cyusen3
+{
+ text-align:center;
 }
 </style>
 </head>
 <body>
-<div>抽選ページ</div>
+
+<div class="cyusen3">
+<div class="cyusen3">抽選ページ</div>
 <br>
-<input type="button" value="抽選開始！" id="cyusen" class="btn">
+<!--buttonはtext align:centerで揃う-->
+<input class="cyusen2" type="button" value="抽選開始！" id="cyusen">
+
 <br>
 <br>
-<div id="result"></div>
+<div class="cyusen1" id="result"></div>
 <br>
-<div id="sumimark"></div>
+<div class="cyusen1" id="sumimark"></div>
 <br>
 <br>
-<div>下記ボタンは、スタッフ以外は操作しないで下さい</div>
-<input type="button" value="済みマーク" id="sumi" class="btn">
-<input type="button" value="lsClear" id="lsClear" >
+<div class="cyusen3">下記ボタンは、スタッフ以外は操作しないで下さい</div>
+
+<input class="cyusen2" type="button" value="済みマーク" id="sumi" >
+<input class="cyusen2" type="button" value="lsClear" id="lsClear" >
+</div>
+
 <script>
 
+var hizuke=new Date().getDate();
+
+if((localStorage.getItem("sanka") < (hizuke - 1)) || !(localStorage.getItem("sanka"))){localStorage.clear()};
+localStorage.setItem("sanka",hizuke);
 
 document.getElementById("result").innerHTML="";
 document.getElementById("sumimark").innerHTML="";
@@ -49,7 +70,7 @@ if(localStorage.getItem("lott") == 1)
 
 if(localStorage.getItem("lott2") == 1)
  {
- document.getElementById("sumimark").innerHTML="「割引券利用済み」";
+ document.getElementById("sumimark").innerHTML="<img src='./icon/sumi.png'>";
  }
 
 
@@ -64,19 +85,29 @@ var lot=Math.floor(Math.random()*arr.length);
 
 if(lot == 2)
  {
- document.getElementById("result").innerHTML="はちたま見学料<br>[半額チケット]が当たりました！";
+ document.getElementById("result").innerHTML="<img src='./icon/laughlot.gif'>";
+ setTimeout(function()
+  {
+  document.getElementById("result").innerHTML="はちたま見学料<br>[半額チケット]が当たりました！"},5000);
  }
  else if(lot == 1)
  {
- document.getElementById("result").innerHTML="はちたま見学料<br>[3割引チケット]が当たりました！";
+ document.getElementById("result").innerHTML="<img src='./icon/laughlot.gif'>";
+  setTimeout(function()
+  {
+  document.getElementById("result").innerHTML="はちたま見学料<br>[3割引チケット]が当たりました！"},5000);
  }else
  {
- document.getElementById("result").innerHTML="はちたま見学料<br>[1割引チケット]が当たりました！";
+ document.getElementById("result").innerHTML="<img src='./icon/laughlot.gif'>";
+  setTimeout(function()
+  {
+  document.getElementById("result").innerHTML="はちたま見学料<br>[1割引チケット]が当たりました！"},5000);
  }
 
 localStorage.setItem('lott', 1);
 document.getElementById("cyusen").disabled="true";
 };
+
 
 
 
@@ -91,7 +122,7 @@ sumi.addEventListener('click', function(e)
   timer = setTimeout(function() {
     if(clicks==3)
     	{
-    	document.getElementById("sumimark").innerHTML="「割引券利用済み」";
+    	document.getElementById("sumimark").innerHTML="<img src='./icon/sumi.png'>";
       localStorage.setItem('lott2', 1);
     	};
     clicks = 0;
