@@ -169,6 +169,12 @@ sumi.addEventListener('click', function(e)
   }, timeout);
 });
 
+document.addEventListener('touchstart', function(e) {
+  if (event.touches.length > 1) {
+    event.preventDefault();
+  }
+}, true);
+
 
 </script>
 </body>
