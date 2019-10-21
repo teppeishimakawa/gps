@@ -14,12 +14,13 @@ var latlng0,latlng1,latlng2,latlng3;
 var hizuke=new Date().getDate();
 
 
-if((localStorage.getItem("sanka") < (hizuke - 1)) || !(localStorage.getItem("sanka"))){localStorage.clear()};
-localStorage.setItem("sanka",hizuke);
 
 //geolocation
 navigator.geolocation.getCurrentPosition(success, error, {enableHighAccuracy:true, timeout:10000, maximumAge:0});
 
+
+if((localStorage.getItem("sanka") < (hizuke - 1)) || !(localStorage.getItem("sanka"))){localStorage.clear()};
+localStorage.setItem("sanka",hizuke);
 
 function initMap()
 {
@@ -63,7 +64,7 @@ if(!map)
 
 
 
-
+//user
 if(marker_user)
 {
 marker_user.setMap(null);
@@ -82,6 +83,7 @@ marker_user.setMap(null);
 //ラフ
 if(!marker_p1)
   {
+
    latlng1 = new google.maps.LatLng(randRange(35626500,35627690) ,randRange(139772903,139775709));
    marker_p1 = new google.maps.Marker
    ({
@@ -93,7 +95,6 @@ if(!marker_p1)
        }
    });
 
-  //laugh
 marker_p1.addListener("click",function()
 {
   var infoWindow1 = new google.maps.InfoWindow({
@@ -109,6 +110,7 @@ infoWindow1.open(map);
 //はちたま
 if(!marker_p2)
   {
+
    //latlng2 = new google.maps.LatLng(randRange(35626500,35627690) ,randRange(139772903,139775709));
    latlng2 = new google.maps.LatLng(35.627012,139.774750);
    marker_p2 = new google.maps.Marker
@@ -122,7 +124,6 @@ if(!marker_p2)
        }
    });
 
-//hatitama
 marker_p2.addListener("click",function()
 {
   var infoWindow2 = new google.maps.InfoWindow({
@@ -136,8 +137,8 @@ infoWindow2.open(map);
   }
 
 
-  //ガンダム
-  if(!marker_p3)
+//ガンダム
+if(!marker_p3)
   {
    //latlng3 = new google.maps.LatLng(randRange(35626500,35627690) ,randRange(139772903,139775709));
    latlng3 = new google.maps.LatLng(35.624393, 139.775478);
@@ -152,7 +153,6 @@ infoWindow2.open(map);
        }
    });
 
-//gundam
 marker_p3.addListener("click",function()
 {
   var infoWindow3 = new google.maps.InfoWindow({
@@ -187,7 +187,6 @@ myCircle.setMap(null);
   */
 
 
-
 //２点間の距離
 function distance(lat1, lng1, lat2, lng2) {
   lat1 *= Math.PI / 180;
@@ -197,15 +196,15 @@ function distance(lat1, lng1, lat2, lng2) {
   return 6371 * Math.acos(Math.cos(lat1) * Math.cos(lat2) * Math.cos(lng2 - lng1) + Math.sin(lat1) * Math.sin(lat2));
 }
 
-
+//メートル単位
   var dis1=distance(latlng0.lat(),latlng0.lng(),latlng1.lat(),latlng1.lng())*1000;
-  console.log(dis1);
+  //console.log(dis1);
 
   var dis2=distance(latlng0.lat(),latlng0.lng(),latlng2.lat(),latlng2.lng())*1000;
-  console.log(dis2);
+  //console.log(dis2);
 
   var dis3=distance(latlng0.lat(),latlng0.lng(),latlng3.lat(),latlng3.lng())*1000;
-  console.log(dis3);
+  //console.log(dis3);
 
 
 //ラフ
@@ -226,7 +225,7 @@ if((dis1 < 20000) && (localStorage.getItem("lot1") != 1))
 
 
 //はちたま
-if((dis2 < 20) && (localStorage.getItem("lot2") != 1))
+if((dis2 < 30) && (localStorage.getItem("lot2") != 1))
   {
   marker_p2.setAnimation(google.maps.Animation.BOUNCE);
   marker_p2.setIcon(
@@ -242,7 +241,7 @@ if((dis2 < 20) && (localStorage.getItem("lot2") != 1))
   }
 
 
-if((dis3 < 20) && (localStorage.getItem("lot3") != 1))
+if((dis3 < 30) && (localStorage.getItem("lot3") != 1))
   {
   marker_p3.setAnimation(google.maps.Animation.BOUNCE);
   marker_p3.setIcon(
@@ -324,10 +323,3 @@ var timer=setInterval(initMap,7000);
 /*
 var randRange = function(min, max){Math.floor(Math.random() * (max - min + 1) + min)}/1000000;
 */
-
-
-
-
-
-
-
