@@ -57,7 +57,7 @@ var rslt1get=localStorage.getItem("rslt1a");
 var rslt2get=localStorage.getItem("rslt2a");
 var rslt3get=localStorage.getItem("rslt3a");
 //抽選実施可否
-//var lott1get=localStorage.getItem("lott1a");
+var lott1get=localStorage.getItem("lott1a");
 //済み
 var lott2get=localStorage.getItem("lott2a");
 
@@ -76,8 +76,8 @@ document.getElementById("result").innerHTML="はちたま入場料<br>[10%OFFチ
 document.getElementById("result").innerHTML="";
 }
 
-//lott1
-if(localStorage.getItem("lott1a") == 1)
+
+if(lott1get == 1)
  {
  document.getElementById("cyusen").disabled="true";
  }else
