@@ -55,21 +55,41 @@
 
 
 
-
+//ls:rslt1,2,3
+if(localStorage.getItem("rslt1a") == 1)
+{
+document.getElementById("result").innerHTML="はちたま入場料<br>[50%OFFチケット]が当たりました！";
+}else if(localStorage.getItem("rslt2a") == 1)
+{
+document.getElementById("result").innerHTML="はちたま入場料<br>[30%OFFチケット]が当たりました！";
+}else if(localStorage.getItem("rslt3a") == 1)
+{
+document.getElementById("result").innerHTML="はちたま入場料<br>[10%OFFチケット]が当たりました！";
+}else
+{
 document.getElementById("result").innerHTML="";
-document.getElementById("sumimark").innerHTML="";
+}
 
 
-if(localStorage.getItem("lott1b") == 1)
+//ls:lott1
+if(localStorage.getItem("lott1a") == 1)
  {
  document.getElementById("cyusen").disabled="true";
- }
-
-
-if(localStorage.getItem("lott2b") == 1)
+ }else
  {
- document.getElementById("sumimark").innerHTML="<img src='./icon/sumi.png'>";
+ document.getElementById("cyusen").disabled="";
  }
+
+
+//ls:lott2
+if(localStorage.getItem("lott2a") == 1)
+{
+document.getElementById("sumimark").innerHTML="<img src='./icon/sumi.png'>";
+}else
+{
+document.getElementById("sumimark").innerHTML="";
+}
+
 
 
 document.getElementById("lsClear").onclick=function(){localStorage.clear()};
@@ -87,6 +107,8 @@ if(lot == 2)
  setTimeout(function()
   {
   document.getElementById("result").innerHTML="はちたま入場料<br>[50%OFFチケット]が当たりました！"},5000);
+  //ls:rslt1
+  localStorage.setItem('rslt1a', 1);
  }
  else if(lot == 1)
  {
@@ -94,15 +116,20 @@ if(lot == 2)
   setTimeout(function()
   {
   document.getElementById("result").innerHTML="はちたま入場料<br>[30%OFFチケット]が当たりました！"},5000);
+  //ls:rslt2
+  localStorage.setItem('rslt2a', 1);
  }else
  {
  document.getElementById("result").innerHTML="<img src='./icon/laughlot.gif'>";
   setTimeout(function()
   {
   document.getElementById("result").innerHTML="はちたま入場料<br>[10%OFFチケット]が当たりました！"},5000);
+  //ls:rslt3
+  localStorage.setItem('rslt3a', 1);
  }
 
-localStorage.setItem('lott1b', 1);
+//ls:lott1
+localStorage.setItem('lott1a', 1);
 document.getElementById("cyusen").disabled="true";
 };
 
@@ -121,7 +148,8 @@ sumi.addEventListener('click', function(e)
     if(clicks==3)
     	{
     	document.getElementById("sumimark").innerHTML="<img src='./icon/sumi.png'>";
-      localStorage.setItem('lott2b', 1);
+      //lott2
+      localStorage.setItem('lott2a', 1);
     	};
     clicks = 0;
   }, timeout);
