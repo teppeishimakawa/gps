@@ -59,7 +59,7 @@ if(!map)
     map = new google.maps.Map(document.getElementById('map'),
     {
      center: {lat:position.coords.latitude , lng:position.coords.longitude},
-     zoom: 15
+     zoom: 15,
      styles:
      [
        //全てのラベルを非表示
