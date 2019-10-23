@@ -106,7 +106,8 @@ if(!map)
         "elementType": "labels",
         "stylers": [
             {
-                "visibility": "off"
+                "visibility": "on"
+                //"visibility": "off"
             }
         ]
     },
