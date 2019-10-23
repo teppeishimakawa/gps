@@ -97,7 +97,8 @@ if(!map)
                 "lightness": 100
             },
             {
-                "visibility": "simplified"
+                "visibility": "on"
+                //"visibility": "simplified"
             }
         ]
     },
