@@ -60,6 +60,18 @@ if(!map)
     {
      center: {lat:position.coords.latitude , lng:position.coords.longitude},
      zoom: 15
+     styles:
+     [
+       //全てのラベルを非表示
+       {
+        featureType: 'all',
+        elementType: 'labels',
+        stylers:
+        [
+          {visibility: 'off'},
+        ],
+       },
+     ]
     });
  }
 
