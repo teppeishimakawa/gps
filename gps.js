@@ -406,7 +406,7 @@ function stop()
  //navigator.geolocation.clearWatch(watchId);
 }
 
-var timer=setInterval(initMap,7000);
+var timer=setInterval(initMap,10000);
 
 
 
